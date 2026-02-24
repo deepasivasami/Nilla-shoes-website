@@ -114,14 +114,10 @@ let submitData = () => {
 
        if(ischeck){
          alert("fill the all product")
-        
-       }
 
 
-       
-    // Create product object
 
-       let productData ={
+         let productData ={
         productId: Date.now(),
         product_Name: productname,
         product_img: imageurl,
@@ -130,22 +126,28 @@ let submitData = () => {
         stock: stock,
         offerprice: offer,
        };
-
-
-       // Add to list and save
-       productList.push(productData)
+         productList.push(productData)
        localStorage.setItem("productList",JSON.stringify(productList))
 
-      loadingData();
+     
 
            
-        };
+        }
 
 
+        else{
+              alert("please enter the all document correct")
+        }
+ loadingData();
+        
+       }
+
+
+       
+   
 
          
 
-// Load product table
 
 
          
@@ -280,3 +282,6 @@ document.addEventListener("click", function(e){
         sidebar.classList.remove("active");
     }
 });
+
+
+
