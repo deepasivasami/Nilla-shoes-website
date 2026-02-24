@@ -123,6 +123,7 @@ body {
     border: 1px solid rgb(0, 242, 255);
 }
 .container {
+    width: 200px;
     display: flex;
     flex-direction: column;
     padding: 5px;
