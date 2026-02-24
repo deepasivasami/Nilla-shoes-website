@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/das.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   
+        <header>
+             <p id="toggleSidebar"><i class="fa-solid fa-bars"></i></p>
+
+        <!-- <p><i class="fa-solid fa-bars"></i></p> -->
+       <p class="pogo">
+<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-bell"></i>
+<i class="fa-solid fa-cart-shopping"></i>
+    </p>
+
+
+
+    </header>
+    <aside>
+        <div class="logo">
+             <img src="./images/person_1.jpg" alt="">
+        </div>
+
+        <h1>Admin</h1>
+        <ul>
+            <li><a href="./dasbord.html"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+            <li><a href="./category.html"><i class="fa-solid fa-user"></i>Category</a></li>
+            <li><a href="./product.html"><i class="fa-brands fa-product-hunt"></i>Products</a></li>
+            <li><a href="./detail.html"><i class="fa-solid fa-magnifying-glass"></i>customer</a></li>
+            <li><a href="./logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+        </ul>
+    </aside>
+    <main>
+      <h1>Welcome to Dashboard
+</h1>
+<div class="herd">
+<div class="containers">
+    <h1 id="total">1</h1>
+    <p> Customers user</p>
+</div>
+<div class="containers">
+    <h1 id="produt_total">10</h1>
+    <p>Default Products</p>
+</div>
+<div class="containers">
+    <h1>1</h1>
+    <p>Dashboard Products</p>
+</div>
+</div>
+
+    </main>
+     <footer>
+    Admin Panel © 2026
+</footer>
+
+    <script>
+
+
+
+let updateDashboardCounts = () => {
+
+    let customers = JSON.parse(localStorage.getItem("customerList")) || [];
+    document.getElementById("total").innerText = customers.length;
+
+    let products = JSON.parse(localStorage.getItem("productList")) || [];
+    document.getElementById("produt_total").innerText = products.length;
+};
+
+updateDashboardCounts();
+
+/* Sidebar Toggle */
+let menuBtn = document.querySelector(".fa-bars");
+let sidebar = document.querySelector("aside");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+
+
+
+    
+});
+document.addEventListener("click", function(e){
+    if(!sidebar.contains(e.target) && !menuBtn.contains(e.target)){
+        sidebar.classList.remove("active");
+    }
+});
+
+
+
+
+
+
+// // Sidebar toggle
+// const toggleBtn = document.getElementById("toggleSidebar");
+// const sidebar = document.querySelector("aside");
+
+// toggleBtn.addEventListener("click", () => {
+//     sidebar.classList.toggle("hide");
+// });
+
+// // Update dashboard counts
+//    let updateDashboardCounts = () => {
+//     // Total Customers
+//     let customers = JSON.parse(localStorage.getItem("customerList")) || [];
+//     document.getElementById("total").innerText = customers.length;
+
+//     // Total Products
+//     let products = JSON.parse(localStorage.getItem("productList")) || [];
+//     document.getElementById("product_total").innerText = products.length;
+// };
+
+// updateDashboardCounts(); -->
+
+
+//     const toggleBtn = document.getElementById("toggleSidebar");
+//     const sidebar = document.querySelector("aside");
+
+//     toggleBtn.addEventListener("click", () => {
+//         sidebar.classList.toggle("hide");
+//     });
+
+// let updateDashboardCounts = () => {
+
+//     // Total Customers
+//     let customers = JSON.parse(localStorage.getItem("customerList")) || [];
+//     document.getElementById("total").innerText = customers.length;
+
+//     // Total Products
+//     let products = JSON.parse(localStorage.getItem("productList")) || [];
+//     document.getElementById("produt_total").innerText = products.length;
+// };
+
+// updateDashboardCounts();
+        
+    </script>
+</body>
+</html>

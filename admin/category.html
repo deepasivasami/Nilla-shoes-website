@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../css/category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        
+</head>
+<body>
+
+<header>
+   
+    <p><i class="fa-solid fa-bars"></i></p>
+    <p class="pogo">
+<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-bell"></i>
+<i class="fa-solid fa-cart-shopping"></i>
+    </p>
+
+
+</header>
+
+<aside>
+    <div class="logo">
+        <img src="./images/person_1.jpg" alt="">
+    </div>
+    <h1>Admin</h1>
+
+    <ul>
+        <li><a href="dasbord.html"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+        <li><a href="category.html"><i class="fa-solid fa-user"></i>Category</a></li>
+        <li><a href="product.html"><i class="fa-brands fa-product-hunt"></i>Products</a></li>
+        <li><a href="./detail.html"><i class="fa-solid fa-magnifying-glass"></i>customer</a></li>
+        <li><a href="./logout.html"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+    </ul>
+</aside>
+
+<main>
+    <div class="container_fluid">
+        <h1 class="heads">Category</h1>
+
+        <div class="container">
+            <!-- <textarea id="category" placeholder="Enter category"></textarea> -->
+              <input type="text" id="category"  placeholder="Enter category">
+    <span id="caterror" style="color:red;"></span>
+        </div>
+        <div class="container">
+            <input type="url" id="images"  placeholder="Enter imges">
+    <span id="imgerror" style="color:red;"></span>
+        </div>
+
+        <div class="container">
+            <button onclick="category()">Submit</button>
+        </div>
+    </div>
+
+    <div class="document">
+      <table border="1" cellpadding="10">
+            <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Category</th>
+                 <th>image</th>
+            </tr>
+            </thead>
+            <tbody id="table_Body">
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<footer>
+    Admin Panel © 2026
+</footer>
+
+<script src="../js/cate.js"></script>
+
+
+
+
+</body>
+</html>

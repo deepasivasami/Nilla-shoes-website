@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+
+
+
+body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 8vh auto 8vh;
+    grid-template-areas:
+        "aside header"
+        "aside main"
+        "aside footer";
+    height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+header { 
+       background-image: url("../images/Space-Background-Image-8-1536x1024.jpg");
+
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 24px;
+    position: relative;
+}
+
+header p{
+      color: #e0e4e5;
+
+}
+header .pogo{
+   position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+   
+}
+
+/* Sidebar */
+aside {
+    grid-area: aside;
+    background-image: url("../images/Space-Background-Image-8-1536x1024.jpg");
+        /* background: #000428; */
+    /* background: linear-gradient(#000428, #004e92); */
+    color: cyan;
+    padding: 20px;
+}
+
+aside .logo {
+   width: 100px;
+    height: 100px;
+    background: #e0e4e5;
+    border-radius: 50%;
+    margin: 30% auto 0;
+
+}
+aside .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+aside h1{
+   text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+      text-shadow:   1px 1px 2px #06f5ed, 0 0 25px rgb(13, 186, 221), 0 0 5px rgb(0, 217, 255);
+
+}
+
+aside ul {
+    list-style: none;
+     margin-top: 20%;
+}
+
+aside ul li  {
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+aside ul li a{
+  color: #06f5ed;
+    text-decoration: none;
+    font-size: 1.2rem;
+ 
+}
+aside ul li a i{
+  color: orange;
+    margin-right: 15px;
+ 
+}
+
+aside ul li:hover {
+    color: #00cfff;
+}
+
+
+main {
+     background-image: url("../images/images.jpg");
+    grid-area: main;
+    padding: 20px;
+    overflow-y: auto;
+    /* margin-top: 20%; */
+    /* display: grid;
+    place-items: center; */
+}
+main h1{
+    color: #e0e4e5;
+  font-size: 40px;
+    margin-top: 5%;
+
+}
+main .herd{
+  margin-top: 20px;
+  display: flex;
+      flex-wrap: wrap;
+  gap: 5%;
+  /* text-align: center; */
+  
+
+
+}
+main .containers{
+     margin-top: 20px ;
+     width: 200px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #e0e4e5;
+  box-shadow: rgba(250, 246, 246, 0.621) 0px 18px 50px -10px;
+
+}
+main .containers h1{
+    color: #111213;
+    text-align: center;
+}
+main .containers p{
+    text-align: center;
+}
+
+
+
+footer {
+    grid-area: footer;
+        background-image: url("../images/Space-Background-Image-8-1536x1024.jpg");
+
+    text-align: center;
+    padding: 10px;
+    color: aliceblue;
+}
+
+
+
+@media (max-width: 548px) {
+
+     
+    body {
+        display: block;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        font-size: 20px;
+    }
+
+    header .pogo {
+        display: flex;
+        gap: 15px;
+        position: static;
+        transform: none;
+    }
+
+    
+
+     aside{
+        position: fixed;
+        top: 0;
+        left: -250px;   /* fully hide */
+        width: 220px;
+        height: 100%;
+        z-index: 1000;
+        transition: left 0.4s ease;
+    }
+
+    
+
+    aside.active {
+        left: 0;
+    }
+
+    /* Main */
+    main {
+        padding: 20px 15px;
+    }
+
+    main h1 {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    /* Cards Container */
+    .herd {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Cards */
+    .containers {
+        width: 95%;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    .containers h1 {
+        font-size: 28px;
+    }
+
+    .containers p {
+        font-size: 14px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 12px;
+    }
+    aside .logo {
+    width: 100px;
+    height: 100px;
+    background: #e0e4e5;
+    border-radius: 50%;
+    margin: 0 auto 0;
+}
+aside h1 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px #06f5ed, 0 0 25px rgb(13, 186, 221), 0 0 5px rgb(0, 217, 255);
+}
+aside ul {
+    list-style: none;
+    margin-top: 5px;
+}
+aside ul li a {
+    color: #06f5ed;
+    text-decoration: none;
+    font-size: 1rem;
+}
+aside ul li {
+    margin: 2px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+}

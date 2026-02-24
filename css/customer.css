@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 8vh auto 8vh;
+    grid-template-areas:
+        "aside header"
+        "aside main"
+        "aside footer";
+    height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+header { 
+       background-image: url("../images/Space-Background-Image-8-1536x1024.jpg");
+
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 24px;
+    position: relative;
+}
+
+header p{
+      color: #e0e4e5;
+
+}
+header .pogo{
+   position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+   
+}
+
+
+aside {
+    grid-area: aside;
+    background-image: url("../images/Space-Background-Image-8-1536x1024.jpg");
+    color: cyan;
+    padding: 20px;
+}
+
+aside .logo {
+   width: 100px;
+    height: 100px;
+    background: #e0e4e5;
+    border-radius: 50%;
+    margin: 30% auto 0;
+
+}
+aside .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+aside h1{
+   text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+      text-shadow:   1px 1px 2px #06f5ed, 0 0 25px rgb(13, 186, 221), 0 0 5px rgb(0, 217, 255);
+
+}
+
+aside ul {
+    list-style: none;
+     margin-top: 20%;
+}
+
+aside ul li  {
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+aside ul li a{
+  color: #06f5ed;
+    text-decoration: none;
+    font-size: 1.2rem;
+ 
+}
+aside ul li a i{
+  color: orange;
+    margin-right: 15px;
+ 
+}
+
+aside ul li:hover {
+    color: #00cfff;
+}
+
+
+main {
+     background-image: url("../images/images.jpg");
+    grid-area: main;
+    display: grid;
+    place-items: center;
+   text-align: center;
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+footer {
+    grid-area: footer;
+        background-image: url("../images/Space-Background-Image-8-1536x1024.jpg");
+
+    text-align: center;
+    padding: 10px;
+    color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 548px) {
+
+    /* Remove Grid Layout */
+    body {
+        display: block !important;
+        height: auto;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    header .pogo {
+        position: static;
+        transform: none;
+        display: flex;
+        gap: 15px;
+    }
+
+    /* Sidebar */
+    aside {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        width: 230px;
+        height: 100vh;
+        z-index: 1000;
+        transition: 0.4s ease;
+    }
+
+    aside.active {
+        left: 0;
+    }
+
+    aside .logo {
+        margin: 20px auto;
+    }
+
+    aside h1 {
+        font-size: 22px;
+    }
+
+    aside ul {
+        margin-top: 20px;
+    }
+
+    aside ul li {
+        margin: 10px 0;
+    }
+
+    aside ul li a {
+        font-size: 1rem;
+    }
+
+    /* Main Section */
+    main {
+        padding: 15px;
+        display: block;
+        overflow-x: auto;
+    }
+
+    /* Make Table Scrollable */
+    table {
+        width: 100%;
+        min-width: 600px;   /* prevents breaking */
+        border-collapse: collapse;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    footer {
+        padding: 12px;
+    }
+}
+
+
+
+
+
+
+
+/* main{
+     background: #020024;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    place-content: center;
+    height: 100vh;
+    margin: 20px;
+    padding: 20px;
+    
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+table {
+    color: aqua;
+  border-collapse: collapse;
+  /* width: 100%; */
+   margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+th, td {
+  border: 1px solid rgb(249, 245, 245);
+   margin: 20px;
+    padding: 20px;
+}

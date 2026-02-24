@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    
+        <header>
+
+        <p><i class="fa-solid fa-bars"></i></p>
+       <p class="pogo">
+<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-bell"></i>
+<i class="fa-solid fa-cart-shopping"></i>
+    </p>
+
+
+
+    </header>
+    <aside>
+        <div class="logo">
+             <img src="./images/person_1.jpg" alt="">
+        </div>
+
+        <h1>Admin</h1>
+        <ul>
+            <li><a href="./dasbord.html"><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+            <li><a href="./category.html"><i class="fa-solid fa-user"></i>Category</a></li>
+            <li><a href="./product.html"><i class="fa-brands fa-product-hunt"></i>Products</a></li>
+            <li><a href="./detail.html"><i class="fa-solid fa-magnifying-glass"></i>customer</a></li>
+            <li><a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+        </ul>
+    </aside>
+    <main>
+        <div class="container">
+
+            <h1 class="hed">Product</h1>
+                <input type="hidden" id="productId">
+            <div class="logo">
+                <input type="text" placeholder="Enter Image URL" id="pro1">
+                <span id="img_error" class="colors"></span><br>
+            </div>
+            <div class="logo">
+                <input type="text" placeholder="Product Name" id="pro2">
+                <span id="name_error" class="colors"></span><br>
+            </div>
+            <div class="logo">
+                <input type="text" placeholder="Category" id="pro3">
+                <span id="cate_error" class="colors"></span><br>
+            </div>
+            <div class="logo">
+                <input type="number" placeholder="Price" id="pro4">
+                <span id="price_error" class="colors"></span><br>
+            </div>
+            <div class="logo">
+                <input type="number" placeholder="Stock" id="pro5">
+                <span id="stock_error" class="colors"></span><br>
+            </div>
+            <div class="logo">
+                <input type="number" placeholder="Offer Price" id="pro6">
+                <span id="offers_error" class="colors"></span><br>
+            </div>
+
+
+           <button onclick="submitData()" id="submitbtn">SUBMIT</button>
+                <button onclick="updateData()" id="updatebtn" style="display: none;">Update</button>
+        </div>
+
+
+
+
+
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ProductId</th>
+                        <th>Image</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Offer</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="productLoads">
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td><button>update</button>
+                        <button>delete</button></td>
+                       
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </main>
+    <footer>
+    Admin Panel © 2026
+</footer>
+
+
+   <script src="../js/product.js"></script>
+
+   
+
+</body>
+
+</html>
